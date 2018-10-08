@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>登録済みのブログ一覧</h1>
+<p class="title">登録済みのブログ一覧</p>
 
 <table>
   <thead>
@@ -18,9 +18,9 @@
         <td><%= blog.created_at %></td>
         <td><%= blog.title %></td>
         <td><%= blog.content %></td>
-        <td><%= link_to '表示', blog %></td>
-        <td><%= link_to '編集', edit_blog_path(blog) %></td>
-        <td><%= link_to '削除', blog, method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+        <td><%= link_to '表示', blog, class: :"btn btn-success" %></td>
+        <td><%= link_to '編集', edit_blog_path(blog), class: :"btn btn-info" %></td>
+        <td><%= link_to '削除', blog, method: :delete, data: { confirm: '本当に削除していいですか？' }, class: :"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
